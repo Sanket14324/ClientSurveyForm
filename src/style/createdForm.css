@@ -1,0 +1,27 @@
+.main{
+    text-align: center;
+  }
+
+  .sub-main{
+    border-top: 2px solid black ;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    justify-content: space-between;
+    padding: 0.5rem;
+    
+  }
+  .question{
+    margin: 10px;
+    color: black;
+    text-align: left;
+    
+  }
+  .questiontext{
+    font-weight: bold;
+
+  }
+
+  .options-text{
+    text-align:left;
+    justify-content:last baseline;
+  }

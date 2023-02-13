@@ -1,0 +1,73 @@
+.discription_question_1{
+    width: "80%";
+    float: "right";
+    background-color: lightgray;
+     padding: "20px";
+     margin: 10px;
+     outline: none;
+     /* background-color: lightgray; */
+}
+
+.discription_question_1:focus{
+    box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+} 
+
+.discription_answer_1{
+    width: "80%";
+    box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+    background-color: lightgray;
+    
+    border:none;
+    
+    float: "right";
+     padding: "20px";
+     margin: 10px;
+     outline: none;
+    
+     /* background-color: lightgray; */
+}
+
+.discription_answer_1:focus{
+    box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+} 
+
+.discription_container{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 19px;
+    border: 1px solid bisque;
+    border-radius: 9px;   
+     background-color: lightgray;
+     /* box-shadow: inset 0px -17px 0px 0px rgba(163, 226, 81, 0.7); */
+     box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  transition: all ease 200ms;
+ outline: none;
+}
+
+.discription_delete_button{
+    margin: 10px;
+}
+
+.discriptive_add{
+    margin:10px
+}
+
+.discription_container input{
+    font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+  border:none;
+  box-shadow: inset 0px -3px 0px 0px rgba(238, 128, 223, 0.507);
+  transition: box-shadow 0.2s ease-in;
+}
+
+.discriptive_add{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 0.5px;
+    border: none;
+    background-color: rgb(233, 221, 205);
+    color: rgb(68, 67, 67);
+}
+
+
+
