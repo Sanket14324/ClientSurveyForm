@@ -69,5 +69,13 @@
     color: rgb(68, 67, 67);
 }
 
+.discriptive_add:hover{
+    
+    color: rgb(98, 130, 245);
+}
+.discription_add:active{
+    transform: scale(0.95);
+}
+
 
 
