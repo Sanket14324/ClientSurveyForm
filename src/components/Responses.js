@@ -38,15 +38,22 @@ const Responses = () => {
 }
 
 const getResponse = async () => {
-    const response = await fetch(`/api/response/forms/responses/${location.state.id}`);
+    const response = await fetch(`/api/response/form/responses/63ea0f776a86c0462cd13c1f`);
+    // const response = await fetch(`/api/response/forms/responses/'+ 63ea0f776a86c0462cd13c1f);${location.state.id}
     console.log(location.state.id);
     const jsonResponse = await response.json();
     console.log(jsonResponse)
     const ArrayOfResponse = jsonResponse.map(
         
-        responsearray => <div><ol>{responsearray.responses.map(
+        responsearray => <div>
+                        <div>{responsearray.email}</div>
+            
+                        <ol>{responsearray.responses.map(
 
-                            element => <li>{element.answer}</li>
+                            element => <li>
+                            
+                                {element.question}
+                                {element.answer}</li>
                          )}
 
                             </ol> 
