@@ -45,7 +45,7 @@ const RightContainer = ({ cards,FormTitle})=> {
     </div>
 
 
-      {/* <ul>
+      <ul>
         {
           cards.map((Card, index) => {
            return <li>{Card}</li>
@@ -53,7 +53,7 @@ const RightContainer = ({ cards,FormTitle})=> {
 
         }
       </ul>
-       */}
+      
     </div>
   );
 }

@@ -5,7 +5,6 @@
    
    } 
    .input_field_title{
-   margin: 10px;
     box-shadow: inset 0px -3px 0px 0px rgba(114, 113, 113, 0.2);
     transition: box-shadow 0.2s ease-in;
     background-color: lightblue;
@@ -22,14 +21,4 @@
     color: rgb(68, 67, 67);
    }
 
-
-   .title_add:hover{
-    color: rgb(98, 130, 245);
-   }
-
-   .title_add:active{
-    transform: scale(0.95);
-   }
-
-   
    

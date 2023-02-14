@@ -7,16 +7,8 @@ import Card_discriptive from './Card_discriptive';
 import Card_radio from './Card_radio';
 import Navbar from './Navbar';
 import Card_multiple from './Card_multiple';
-import Button_multipel from './Button_multiple';
+import Button_multiple from './Button_multiple';
 const userId = localStorage.getItem("UserId");
-
-
-
-
-
-
-
-
 // console.log(userId);
 const Main_container = () =>{
 
@@ -79,52 +71,24 @@ const PostData=(e)=>{
     });
   }
 
-  const handleCardDrop = () => {
-    console.log("gooo")
-    
-    setCards([...cards,  <Card_discriptive DataHandler={DataHandler}/>]);
-  };
+const handleCardDrop = () => {
+  console.log("gooo")
   
-  const handleRadioDrop =()=>{
-    setCards([...cards, <Card_radio  DataHandler={DataHandler}/>])
-  }
-  
-  const handleMultipleDrop =() =>{
+  setCards([...cards,  <Card_discriptive DataHandler={DataHandler}/>]);
+};
+
+const handleRadioDrop =()=>{
+  setCards([...cards, <Card_radio  DataHandler={DataHandler}/>])
+}
+
+const handleMultipleDrop = () => {
     setCards([...cards, <Card_multiple  DataHandler={DataHandler}/>])
-  }
+}
 
 // const handleCardDelete = (index) => {
 //   console.log("whyyyyy")
 //   setCards(cards.filter((_, i) => i !== index));
 // };
-
-
-
-
-
-
-
-
-
-const handleDragOver=(e)=>{
-  e.preventDefault();
-}
-
-const handleDrop=(e)=>{
-  console.log("dropped")
-  console.log(e.dataTransfer.getData('id'))
-
-  const id=e.dataTransfer.getData('id')
-
-  if(id==='discriptive'){
-      setCards([...cards,<Card_discriptive/>])
-  }else if(id=='radio'){
-    setCards([...cards,<Card_radio/>])
-  }else if(id=='mcq'){
-    setCards([...cards,<Card_multiple/>])
-  }
-
-}
 
 return (
     <>
@@ -139,48 +103,15 @@ return (
       <Button_radio  className='discriptive' onCardDrop={handleRadioDrop} />
       </div>
       <div>
-      <Button_multipel  className='discriptive' onCardDrop={handleMultipleDrop} />
+      <Button_multiple  className='discriptive' onCardDrop={handleMultipleDrop} />
       </div>
       </div>
       </div>
       <div className='container right'>
-      <div className="droppable" onDrop={(e)=>{handleDrop(e)}} onDragOver={handleDragOver}>
-                   ..
-                </div>
-      
-
-                <div style={{ width: '80%', display:'block'}}> 
       <Right_container cards={cards} FormTitle={FormTitle}/>
-      <br/>
-      <br/>
-      
-      <ul style={{ textAlign: 'center',  display: 'block'  }}>
-        {
-          cards.map((Card, index) => {
-           return <li>{Card}</li>
-        })
-
-        }
-      </ul>
-      </div>
       <div>
       <input type="submit" className="form_data_all" name="form_data" value="Submit Form" id="all_data" onClick={PostData}/>
       </div>
-
-
-      {/* <ul>
-        {
-          cards.map((Card, index) => {
-           return <li>{Card}</li>
-        })
-
-        }
-      </ul> */}
-
-      {/* <div className="droppable" onDrop={(e)=>{handleDrop(e)}} onDragOver={handleDragOver}>
-                   drrr
-                </div> */}
-
       </div>
     </div>
     </>
