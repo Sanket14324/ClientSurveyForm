@@ -49,7 +49,7 @@ const getForm = async () => {
 
                     </div>
                         <a className="middle">
-                                <div className="link delete">Delete</div>
+                                <div className="link delete" onClick={() => deleteForm(form._id)}>Delete</div>
                         </a>
                         <hr></hr>
                 </div>
@@ -88,6 +88,19 @@ const goResponse = async (formId) => {
 
 }
 
+const deleteForm = async (formId) => {
+
+    // const response = await fetch('/api/form/deleteform/'+formId);
+    const res = await fetch('/api/form/deleteform/'+formId, {
+        method: "DELETE",
+        // headers: { "Content-Type": "application/json" },
+    })
+
+    window.location.reload()
+    alert("deleted successfully.")
+    // navigate('/history')
+}
+
 
 
 
@@ -96,7 +109,7 @@ const goResponse = async (formId) => {
 
 const getLinkForPublishById = async (formId) => {
 
-    alert( "http://localhost:5000/api/forms/"+formId);
+    alert( "http://localhost:3000/render/?id="+formId);
 
 }
 

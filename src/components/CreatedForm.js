@@ -82,6 +82,21 @@ const CreatedForm = () => {
                                             )
                                     
                                     }
+                                    if(question.type === 'checkbox'){
+                                        return (
+                                            <div className="question" key={index}>
+                                                <p>{question.questionText}</p>
+                                                {question.options.map((choice, index) => ( 
+                                              
+                                              <div class="options" key={index}>           
+                                              <input type="checkbox" id={choice} name={question.question} value={choice.value} />           
+                                              <label  class="options-text" htmlFor={choice}>{choice.value}</label>               
+                                              </div>
+                                              
+                                          ))}
+                                                </div>
+                                        )
+                                    }
                                     else{
                                         return <p> new question type</p>
                                     }

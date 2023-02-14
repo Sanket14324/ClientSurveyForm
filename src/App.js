@@ -12,7 +12,7 @@ import Landing_page from './components/Landing_page';
 import Logout from './components/Logout';
 import CreatedForm from './components/CreatedForm';
 import Responses from './components/Responses';
-
+import Render_Form from './components/Render_Form';
 const Routing=()=>{
 
   return(
@@ -31,8 +31,8 @@ const Routing=()=>{
 
      <Route path="/test" element={<Card_radio/>} />
 
-     
-
+     <Route path="/render" element={<Render_Form/>} /> 
+      
      <Route path="/logout" element={<Logout/>} /> 
      <Route path="/history" element={<History/>} />
      <Route path="/response" element={<Responses/>}/>

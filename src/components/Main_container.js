@@ -6,7 +6,8 @@ import Button_radio from './Button_radio';
 import Card_discriptive from './Card_discriptive';
 import Card_radio from './Card_radio';
 import Navbar from './Navbar';
-
+import Card_multiple from './Card_multiple';
+import Button_multiple from './Button_multiple';
 const userId = localStorage.getItem("UserId");
 // console.log(userId);
 const Main_container = () =>{
@@ -80,6 +81,10 @@ const handleRadioDrop =()=>{
   setCards([...cards, <Card_radio  DataHandler={DataHandler}/>])
 }
 
+const handleMultipleDrop = () => {
+    setCards([...cards, <Card_multiple  DataHandler={DataHandler}/>])
+}
+
 // const handleCardDelete = (index) => {
 //   console.log("whyyyyy")
 //   setCards(cards.filter((_, i) => i !== index));
@@ -96,6 +101,9 @@ return (
       </div>
       <div>
       <Button_radio  className='discriptive' onCardDrop={handleRadioDrop} />
+      </div>
+      <div>
+      <Button_multiple  className='discriptive' onCardDrop={handleMultipleDrop} />
       </div>
       </div>
       </div>
