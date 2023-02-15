@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Draggable from 'react-draggable';
 
 import '../style/left_container.css'
-import Card_multiple from './Card_multipel';
+import Card_multiple from './Card_multiple';
 
 const Button_multipel = ({ onCardDrop }) => {
 

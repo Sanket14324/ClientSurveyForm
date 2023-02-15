@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import getFormById from './History'
 import  {useLocation} from "react-router-dom";
 import "../style/createdForm.css"
+import Navbar from "./Navbar";
+
 const CreatedForm = () => {
     const [formData, setUserData] = useState([]);
     const location=useLocation()
@@ -43,6 +45,10 @@ const CreatedForm = () => {
     }, [])
 
     return (
+        <>
+
+        <Navbar/>
+
         <div className="main">
             <h2>{formData.title}</h2>
             
@@ -119,6 +125,8 @@ const CreatedForm = () => {
                     
 
             </div>
+
+            </>
 
     )
 

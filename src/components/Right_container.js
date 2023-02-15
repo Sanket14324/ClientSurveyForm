@@ -21,6 +21,7 @@ const RightContainer = ({ cards,FormTitle})=> {
     const onSave = () =>{
       setTitle(value);
       FormTitle(title);
+      window.alert("Questions Saved")
     }
 
   return (

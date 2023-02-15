@@ -13,12 +13,16 @@
   }
   body{
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   margin: 15px 30px;
+   /* margin: 15px 30px; */
    font-size: 19px;
+   
    
   }
   .container{
-   background-color  :rgb(235, 252, 247);
+    /* background-color: radial-gradient(50% 50% at 50% 50%, #2D0065 0%, #000000 100%); */
+   /* background-color  :rgb(41, 240, 180); */
+   background-color  :rgb(2,0,36);
+   background-color: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(24,24,166,1) 40%, rgba(0,212,255,1) 100%);
    /* padding:9px 23px 15px 20px; */
    border: 1px solid bisque;
    border-radius: 7px;
@@ -87,6 +91,10 @@
   max-width: 100%;
   }  
   
+.cont{
+  color: radial-gradient(50% 50% at 50% 50%, #2D0065 0%, #000000 100%);
+}
+
   #Post{
   border-radius: 9px;
   width: 75px;
