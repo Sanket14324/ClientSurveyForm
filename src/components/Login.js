@@ -43,6 +43,8 @@ const Login=()=>{
 
     return(
         <>
+
+        <div className="container">
              
         <div className="containerreg">
              <form method="POST" className="reg-form" id="reg-form">
@@ -61,6 +63,7 @@ const Login=()=>{
             <input  className="re" type="submit" value="Login" id="Login" onClick={loginUser}/>
             </div> 
             </form>
+        </div>
         </div>
 
         </>

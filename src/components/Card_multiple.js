@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../style/card_multipel.css';
 
-const Card_multiple = ({DataHandler}) => {
+const Card_multiple = ({id,DataHandler}) => {
   const [question, setQuestion] = useState("");
   const [options, setOptions] = useState([]);
   const [allMultiple,setAllMultiple] = useState({})
@@ -37,6 +37,7 @@ const Card_multiple = ({DataHandler}) => {
 const getData = () =>{
  
   const set ={
+    id:`checkBox_id${id}`,
     questionText:question,
     options:options,
     type:"checkbox"
@@ -47,13 +48,14 @@ const getData = () =>{
   DataHandler(set)
   console.log(question,"questiongggggg")
   console.log(options,"optionsssss")
+  
 }
 
 
   return (
     <>
     <div className='mcq_container'> 
-    <form onSubmit={handleSubmit}>
+    {/* <form onSubmit={handleSubmit}> */}
       <label>
         Question:
         <input className='discription_question_1' type="text" value={question} onChange={handleQuestionChange} />
@@ -63,14 +65,17 @@ const getData = () =>{
       {options.map((option, index) => (
         <div key={index}>
           <label>
+          <div>
             <input
               type="checkbox"
               checked={option.checked}
               onChange={() => handleOptionCheck(index)}
             />
             {option.value}
+            </div>
           </label>
           <br />
+          
           <label>
             Option {index + 1}:
             <input
@@ -83,13 +88,15 @@ const getData = () =>{
       ))}
       <br />
       <br />
-      <button type="button" onClick={handleOptionAdd}>
+      <div className='mcq_buttons'>
+      <button className='mcq_add' type="button" onClick={handleOptionAdd}>
         Add Option
       </button>
       <br />
-      <br />
-      <button type="submit" onClick={getData}>Save option</button>
-    </form>
+      
+      <button className='mcq_add' type="submit" onClick={getData}>Save option</button>
+      </div>
+    {/* </form> */}
     </div>
     </>
   );

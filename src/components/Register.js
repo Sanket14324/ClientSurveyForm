@@ -66,7 +66,7 @@ const Register=()=>{
     
          <p><label>Password</label> <input className="input_field"  type="password" name="password"  value={user.password} 
         onChange={handleInputs} id="password" placeholder="password" /></p>
-         <p><label>Confirm Password</label> <input className="input_field"  type="cpassword" name="confirm_password" value={user.confirm_password} 
+         <p><label>Confirm Password</label> <input className="input_field"  type="password" name="confirm_password" value={user.confirm_password} 
         onChange={handleInputs} id="cpassword"/></p>
         </div>
         <div className="bu"> 

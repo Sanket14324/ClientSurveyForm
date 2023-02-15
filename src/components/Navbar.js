@@ -29,6 +29,9 @@ const Navbar=()=>{
       <NavLink className="nav-link" to="/choice">Choice </NavLink>
       </li>
       <li className="nav-item mx-3">
+      <NavLink className="nav-link" to="/history">History </NavLink>
+      </li>
+      <li className="nav-item mx-3">
       <NavLink className="nav-link" to="/logout">Logout</NavLink>
       </li> 
     </ul>

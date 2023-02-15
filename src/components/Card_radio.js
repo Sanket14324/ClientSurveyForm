@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../style/card_radio.css'
 
-const Card_radio = ({ DataHandler}) => {
+const Card_radio = ({id, DataHandler}) => {
 
 
   const [options, setOptions] = useState(
@@ -84,6 +84,7 @@ const Card_radio = ({ DataHandler}) => {
   const handleOption = () =>{
 
     const allData={
+      id:`radio_${id}`,
       questionText:question.question_text,
       option: options,
       questionType:"radio"
@@ -92,7 +93,7 @@ const Card_radio = ({ DataHandler}) => {
     console.log("herer")
     DataHandler(allData)
     console.log(allData)   //all radio data
-
+   
   };
 
   // const handleDeleteOption = (optionId) => {
@@ -138,12 +139,14 @@ const Card_radio = ({ DataHandler}) => {
           
     </div>
       ))}
+     
       <button className="radio_add" onClick={handleOption}>
         save Option
       </button>
       <button className="radio_add" onClick={handleAddOption} disabled={editMode}>
         Add Option
       </button>
+      
     </div>
   );
 };

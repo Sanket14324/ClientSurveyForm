@@ -5,13 +5,19 @@ import RightContainer from './Right_container';
 
 
 
-const Card = ({DataHandler}) => {
+const Card = ({id,DataHandler}) => {
 
     const [discriptive,setdiscriptive]=useState({
+      id:`discriptive_${id}`,
     questionText:"",
     questionType:"discriptive"
   })
+// const Card = function DataHandler() {
 
+//     const [discriptive,setdiscriptive]=useState({
+//     questionText:"",
+//     questionType:"discriptive"
+// });
 
   let name,value;
   const handleInputs=(e)=>{
@@ -31,7 +37,11 @@ const onSave = ()=>{
   setdiscriptive({...discriptive,[name]:value})
   setdiscriptive({...discriptive,questionType:"discriptive"})
   console.log(discriptive)
+
+  
+
   DataHandler(discriptive)
+ 
 }
   
 

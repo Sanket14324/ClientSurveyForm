@@ -11,14 +11,17 @@
  
 .left {
   flex: 0.2;
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-color: #250060;
   margin-top: 0;
   
 }
 
 .right {
   flex: 0.8;
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  /* background-color: #5271FF; */
+  background-color: #210D41;
   margin-top: 0;
 }
 
@@ -34,7 +37,8 @@
   padding: 10px;
   margin: 12px;
   /* height: 10%; */
-  background-color: rgb(115, 223, 223);
+  /* background-color: rgb(115, 223, 223); */
+  background-color: #131313;
 }
 
 .radio{

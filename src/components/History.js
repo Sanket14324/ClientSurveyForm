@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import {useNavigate} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import "../style/history.css"
+
+
 var navigate
 const userId = localStorage.getItem("UserId")
 const History=()=>{ 
@@ -15,12 +17,14 @@ const History=()=>{
         );
     }, []);
         return (
-
-            
+             
+          <>
+            <Navbar/>
             <div className="main">
                 <h2>Archive</h2>
                 <ul>{apiResponse}</ul>
             </div>
+            </>
         );
 }
 
