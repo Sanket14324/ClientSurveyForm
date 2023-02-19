@@ -1,108 +1,140 @@
 body {
-    color: #838383;
-    font-family: "Mada", sans-serif;
-    font-size: 0.875rem;
-  }
-
-  h2{
-    font-size: 2.5rem;
-    margin-top: 6px;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    line-height: 1.2
-  }
-  .main{
-    text-align: center;
-  }
-
+  color: #838383;
+  font-family: "Mada", sans-serif;
+  font-size: 0.875rem;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-top: 6px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2}
+.main {
+  text-align: center;
+  margin: auto;
+}
+.post {
+  text-align: center;
+  width: 50%;
+  /* align-items: center; */  display: flex;
+  flex-direction: column;
+  background-color: #22014f;
+  border-radius: 1rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding:1rem;
+}
+.post .pagination {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.05rem;
+  /* border: 1px solid black; */}
+.post .pagination .pagination-form-titile a {
+  width: 51%;
+}
+.post .pagination .pagination-form-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.post .pagination .pagination-form-button a {
+  width: 40%;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+.post .pagination .pagination-form-delete-button {
+  width: 100%;
+  border-radius: 1rem;
+}
+.post .pagination .pagination-form-delete-button .middle{
+  border-radius: 1rem;
+}
+.post .pagination .link {
+  border: 2px solid black;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: .5rem;
+}
+.post .pagination a,
+.post .pagination .view-all {
+  text-decoration: none;
+  color: #007cad;
+  font-weight: 700;
+}
+.post .pagination .view-all {
+  width: 100%;
+}
+/* hover effects */.pagination .link {
+  background: #fff;
+  color: #007cad;
+  background-size: 250% 100%;
+}
+.pagination .next .link {
+  background: linear-gradient(to left, #fff 50%, #007cad 50%);
+  background-size: 250% 100%;
+  background-position: right top;
+  transition: all 0.5s ease;
+  max-width: 250px;
+}
+.pagination .prev .link {
+  background: linear-gradient(to right, #fff 50%, #007cad 50%);
+  background-size: 250% 100%;
+  background-position: left top;
+  transition: all 0.5s ease;
+  max-width: 250px;
+}
+.middle {
+  background: linear-gradient(to right, #fff 50%, #007cad 50%);
+  background-size: 250% 100%;
+  background-position: left top;
+  transition: all 0.5s ease;
+  max-width: 250px;
+}
+.pagination .next .link:hover {
+  background-position: left top;
+  color: #fff;
+}
+.pagination .prev .link:hover {
+  background-position: right top;
+  color: #fff;
+}
+.pagination .next .middle .link:hover,
+.pagination .prev .middle .link:hover {
+  background-color: #007cad;
+  color: #fff;
+  opacity: 1;
+}
+.middle {
+  display: inline-block;
+  text-decoration: none;
+}
+.delete{
+background-color: #fefdfd;
+padding: 10px 20px;
+border: .4px solid #ccc;
+background-color: #fff;
+color: #000;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+}
+.delete:hover {
+background-color: #000;
+color: #fff;
+}
+.delete:active {
+transform: scale(0.95);
+}
+@media only screen and (min-width: 1366px) {
   .post .pagination {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.05rem;
+    padding-right: 1rem;
+    padding-left: 0.9375rem;
+    max-width: 50rem;
+    margin: 0px auto 0 auto;
   }
-
-  .post .pagination a {
-    width: 31%;
-  }
-
-  .post .pagination .link  {
-    border: 2px solid #007cad;
-    text-align: center;
-    margin-bottom: 0.75rem;
-    padding: 0.5rem;
-  }
-  .post .pagination a,
-    .post .pagination .view-all {
-      text-decoration: none;
-      color: #007cad;
-      font-weight: 700;
-    }
-
-    .post .pagination .view-all {
-      width: 100%;
-    }
-
-    /* hover effects */
-    .pagination .link {
-      background: #fff;
-      color: #007cad;
-      background-size: 250% 100%;
-    }
-
-    .pagination .next .link {
-      background: linear-gradient(to left, #fff 50%, #007cad 50%);
-      background-size: 250% 100%;
-      background-position: right top;
-      transition: all 0.5s ease;
-      max-width: 250px;
-    }
-    .pagination .prev .link {
-        background: linear-gradient(to right, #fff 50%, #007cad 50%);
-        background-size: 250% 100%;
-        background-position: left top;
-        transition: all 0.5s ease;
-        max-width: 250px;
-      }
-       .middle  {
-        background: linear-gradient(to right, #fff 50%, #007cad 50%);
-        background-size: 250% 100%;
-        background-position: left top;
-        transition: all 0.5s ease;
-        max-width: 250px;
-      }
-  
-      .delete{
-        padding :0.5rem;
-        background-size: 250% 100%;
-        border : 2px solid #007cad 
-      }
-      .pagination .next .link:hover {
-        background-position: left top;
-      }
-  
-      .pagination .prev .link:hover {
-        background-position: right top;
-      }
-  
-      .pagination .next .middle .link:hover,
-      .pagination .prev .middle .link:hover {
-        background-color: #007cad;
-        color: #fff;
-        opacity: 1;
-      }
-
-      .middle{
-        display: inline-block;
-        text-decoration: none;
-      }
-  
-      @media only screen and (min-width: 1366px) {
-        .post .pagination {
-          padding-right: 1rem;
-          padding-left: 0.9375rem;
-          max-width: 50rem;
-          margin: 0px auto 0 auto;
-        }
-      }
+}

@@ -1,69 +1,67 @@
 import React, { useState } from "react";
 import '../style/card_radio.css'
 
-const Card_radio = ({id, DataHandler}) => {
+const Card_radio = ({ id, DataHandler }) => {
 
 
   const [options, setOptions] = useState(
-   
+
     [
       { id: 1, name: "Option 1" },
       { id: 2, name: "Option 2" },
     ],
-    
 
-);
 
-  
+  );
+
+
   const [selectedOption, setSelectedOption] = useState({
-    id:"", name:"", question_text:""
+    id: "", name: "", question_text: ""
   });
   const [editMode, setEditMode] = useState(false);
   const [editOptionId, setEditOptionId] = useState(null);
 
 
-  const [question,setquestion] = useState({
-    question_text:""
+  const [question, setquestion] = useState({
+    question_text: ""
   });
 
 
-  let name,value;
-  const handlequestion = (e) =>{
-    console.log(e)
-    name=e.target.name
-    value=e.target.value
-    setquestion({...question,[name]:value})
+  let name, value;
+  const handlequestion = (e) => {
+
+    name = e.target.name
+    value = e.target.value
+    setquestion({ ...question, [name]: value })
 
   }
 
 
   const handleOptionChange = (option) => {
-  
-    console.log("question")
-    console.log(question)
-    const temp={
-        id:option.id,
-        name:option.name,
-        question_text:question.question_text
+
+    const temp = {
+      id: option.id,
+      name: option.name,
+      question_text: question.question_text
     }
     setSelectedOption(temp);
-   
+
   };
 
   const handleAddOption = () => {
 
     setOptions([
       ...options,
-      { id: options.length + 1, name: `Option ${options.length + 1}`}
+      { id: options.length + 1, name: `Option ${options.length + 1}` }
     ]);
 
   };
 
   const handleEditOption = (option) => {
-    
+
     setEditMode(true);
     setEditOptionId(option.id);
-    
+
   };
 
   const handleSaveOption = (option) => {
@@ -75,30 +73,27 @@ const Card_radio = ({id, DataHandler}) => {
         return existingOption;
       })
     );
-     setEditMode(false);
+    setEditMode(false);
   };
 
 
 
 
-  const handleOption = () =>{
+  const handleOption = () => {
 
-    const allData={
-      id:`radio_${id}`,
-      questionText:question.question_text,
+    const allData = {
+      id: `radio_${id}`,
+      questionText: question.question_text,
       option: options,
-      questionType:"radio"
+      questionType: "radio"
     }
 
-    console.log("herer")
+
     DataHandler(allData)
-    console.log(allData)   //all radio data
-   
+    //all radio data
+
   };
 
-  // const handleDeleteOption = (optionId) => {
-  //   setOptions(options.filter((option) => option.id !== optionId));
-  // };
 
   return (
     <div className="container_radio">
@@ -110,43 +105,43 @@ const Card_radio = ({id, DataHandler}) => {
       </div>
 
       {options.map((option) => (
-      <div key={option.id}>
+        <div key={option.id}>
 
-        <input
+          <input
             type="radio"
             checked={selectedOption === option}
             onChange={() => handleOptionChange(option)}
-        />
+          />
 
-      {editOptionId === option.id ? (
-        <input
-             className="radio_option"
-             type="text"
-             value={option.name}
-             onChange={(event) =>
-             handleSaveOption({ ...option, name: event.target.value })
-            }
-        />
-            ) : (
+          {editOptionId === option.id ? (
+            <input
+              className="radio_option"
+              type="text"
+              value={option.name}
+              onChange={(event) =>
+                handleSaveOption({ ...option, name: event.target.value })
+              }
+            />
+          ) : (
             option.name
-                )
-      }
-        
-      {editOptionId !== option.id && (
-              <button className="radio_edit" onClick={() => handleEditOption(option)}>Edit</button>
-        )
-      }
-          
-    </div>
+          )
+          }
+
+          {editOptionId !== option.id && (
+            <button className="radio_edit" onClick={() => handleEditOption(option)}>Edit</button>
+          )
+          }
+
+        </div>
       ))}
-     
+
       <button className="radio_add" onClick={handleOption}>
         save Option
       </button>
       <button className="radio_add" onClick={handleAddOption} disabled={editMode}>
         Add Option
       </button>
-      
+
     </div>
   );
 };

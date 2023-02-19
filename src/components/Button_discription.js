@@ -9,49 +9,38 @@ const Button_discription = ({ onCardDrop }) => {
 
 
 
-  const [components,setComponents]=useState([]);
+  const [components, setComponents] = useState([]);
 
-  const handleDragOver=(e)=>{
-      e.preventDefault();
+  const handleDragOver = (e) => {
+    e.preventDefault();
   }
 
-  const handleDrop=(e)=>{
-      console.log("dropped")
-      console.log(e.dataTransfer.getData('id'))
+  const handleDrop = (e) => {
 
-      const id=e.dataTransfer.getData('id')
+    const id = e.dataTransfer.getData('id')
 
-      if(id==='discriptive'){
-          setComponents([...components,<Card_discriptive/>])
-      }
+    if (id === 'discriptive') {
+      setComponents([...components, <Card_discriptive />])
+    }
 
   }
 
-  const handleDragStart=(ev,id)=>{
-      ev.dataTransfer.setData('id',id)
+  const handleDragStart = (ev, id) => {
+    ev.dataTransfer.setData('id', id)
   }
 
 
-    return (
-      <>
-      {/* // <div className='question_type'>
-      //   <Draggable onStop={onCardDrop}>
-      //     <div className='discriptive'> Discriptive</div>
-      //   </Draggable>
-      // </div> */}
+  return (
+    <>
 
+      <div className='question_type' onDragOver={(e) => { handleDragOver(e) }} onDrop={(e) => { handleDrop(e) }}>
 
-        <div className='question_type' onDragOver={(e)=>{handleDragOver(e)}} onDrop={(e)=>{handleDrop(e)}}>
-        
-                   
-                    <div className='discriptive' draggable onDragStart={(e)=>{handleDragStart(e,"discriptive")}}> Discriptive</div>
-                    {/* <button draggable onDragStart={(e)=>{handleDragStart(e,"button-b")}}> button -b</button> */}
-
-               
+        <div className='discriptive' draggable onDragStart={(e) => { handleDragStart(e, "discriptive") }}> Discriptive</div>
+       
       </div>
 
-      </>
-    );
-  };
+    </>
+  );
+};
 
 export default Button_discription;

@@ -1,29 +1,29 @@
 import React, { useEffect } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-const Logout = () =>{
-    const navigate=useNavigate()
+const Logout = () => {
+    const navigate = useNavigate()
 
-    useEffect(()=>{
-        fetch('/api/user/signout',{
-            method:"GET",
+    useEffect(() => {
+        fetch('/api/user/signout', {
+            method: "GET",
             headers: {
                 Accept: "applicaton/json",
-                "Content-Type":"application/json"
+                "Content-Type": "application/json"
             },
-             credentials:"include"
-        }).then((res)=>{
+            credentials: "include"
+        }).then((res) => {
             navigate("/")
-            if (res.status!=200) {
-                const error =new Error(res.error);
+            if (res.status != 200) {
+                const error = new Error(res.error);
                 throw error;
             }
-        }).catch((err)=>{
+        }).catch((err) => {
             console.log(err);
         })
     })
 
-    return(
+    return (
         <>
 
         </>

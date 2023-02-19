@@ -1,0 +1,83 @@
+.Rmain{
+    font-family: 'Josefin Sans', sans-serif;
+    /* background-color:  rgba(0, 0, 0, 0.2); */
+    font-size: 18px;
+    border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0..3);
+    box-shadow: 2px 2px 15px 
+    rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin : 100px auto 0px auto;
+    max-width: 500px;
+    max-height: min-content;
+    border: 3px solid black;
+    padding: 10px;
+  }
+
+  .Rsub-main{
+    text-align: center;
+  } 
+
+
+  .Rtitle{
+    font-family: 'Josefin Sans', sans-serif;
+      text-align: center;
+      color: grey;
+      padding:1em;
+      font-size: 30px;
+  }
+  .Remail{
+      text-align: left; 
+      font-size: 20px;
+      
+      color: black;
+  }
+  .Rinput{
+
+      text-align: left;
+      border: 1px solid #ddd;
+      border-radius:  3px;
+      outline:  7px;
+      padding: 7px;
+      background-color:  #fff;
+      box-shadow: inset 1px 1px 5px
+      rgba(0, 0, 0, 0.3);
+      width : 300px;
+      margin-bottom: 1em;
+     
+      color: black;
+  }
+  .RDinput{
+      text-align: left;
+      width: 400px;
+      padding: 6px 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-style: solid green;
+      background-color: white;
+      color: black;
+  }
+  .questiontext{
+   
+    color: black;
+    
+  }
+  ol.Rlist {
+     color:green  }
+    .Rquestion{
+      text-align: left;
+  }  
+  .Rbutton{
+      padding: 5px 13px;
+      background-color: white;
+      color:green;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 30px;
+  }
+
+  .Roptiontext{
+    text-align: left;
+    padding-left: 10%;
+      padding-left: 10px;
+  }

@@ -14,9 +14,7 @@ const Button_multipel = ({ onCardDrop }) => {
   }
 
   const handleDrop=(e)=>{
-      console.log("dropped")
-      console.log(e.dataTransfer.getData('id'))
-
+      
       const id=e.dataTransfer.getData('id')
 
       if(id==='mcq'){
@@ -32,19 +30,11 @@ const Button_multipel = ({ onCardDrop }) => {
 
 
     return (
-      // <div className='question_type'>
-      //   <Draggable onStop={onCardDrop}>
-      //     <div className='discriptive'> MCQ</div>
-      //   </Draggable>
-      // </div>
 
       <div className='question_type' onDragOver={(e)=>{handleDragOver(e)}} onDrop={(e)=>{handleDrop(e)}}>
         
-                   
                     <div className='discriptive' draggable onDragStart={(e)=>{handleDragStart(e,"mcq")}}>Check Box</div>
-                    {/* <button draggable onDragStart={(e)=>{handleDragStart(e,"button-b")}}> button -b</button> */}
-
-               
+                                 
       </div>
 
     );

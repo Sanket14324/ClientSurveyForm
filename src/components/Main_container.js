@@ -115,7 +115,7 @@ const Main_container = () => {
         </div>
         <div className='container right'>
           <div className="droppable" onDrop={(e) => { handleDrop(e) }} onDragOver={handleDragOver}>
-            ..
+            ....
           </div>
 
 

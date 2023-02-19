@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route,Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -13,41 +13,78 @@ import Logout from './components/Logout';
 import CreatedForm from './components/CreatedForm';
 import Responses from './components/Responses';
 import Render_Form from './components/Render_Form';
-const Routing=()=>{
+import PrivateRoute from './PrivateRoute/PrivateRoute'
+import Thank from './components/Thank';
+const Routing = () => {
 
-  return(
+  return (
     <Routes>
 
-     <Route path="/" element={<Landing_page/>} />
+      <Route path="/" element={<Landing_page />} />
 
 
-     <Route path="/login" element={<Login/>} />
+      <Route path="/login" element={<Login />} />
 
-     <Route path="/register" element={<Register/>} />
+      <Route path="/register" element={<Register />} />
 
-     <Route path="/choice" element={<Choice/>} />
+      <Route path="/choice" element={
+        <PrivateRoute>
+          <Choice />
+        </PrivateRoute>
+      } />
 
-     <Route path="/home" element={<Home/>} />
 
-     <Route path="/test" element={<Card_radio/>} />
+      <Route path="/home" element={
+        <PrivateRoute>
+          <Home />
+        </PrivateRoute>
+      } />
 
-     <Route path="/render" element={<Render_Form/>} /> 
-      
-     <Route path="/logout" element={<Logout/>} /> 
-     <Route path="/history" element={<History/>} />
-     <Route path="/response" element={<Responses/>}/>
-     <Route path="/form" element={<CreatedForm/>}/>   
 
-       
+      <Route path="/test" element={
+        <PrivateRoute>
+          <Card_radio />
+        </PrivateRoute>
+      } />
+
+      <Route path="/render" element={
+        <PrivateRoute>
+          <Render_Form />
+        </PrivateRoute>
+      } />
+
+      <Route path="/logout" element={
+        <PrivateRoute>
+          <Logout />
+        </PrivateRoute>
+      } />
+      <Route path="/history" element={
+        <PrivateRoute>
+          <History />
+        </PrivateRoute>
+      } />
+      <Route path="/form/response" element={
+        <PrivateRoute>
+          <Responses />
+        </PrivateRoute>
+      } />
+      <Route path="/form" element={
+        <PrivateRoute>
+          <CreatedForm />
+        </PrivateRoute>
+      } />
+
+      <Route path="/thanks" element={<Thank/>}></Route>
+
     </Routes>
   )
-   
+
 }
 
 
 
 
-const App = () =>{
+const App = () => {
   return (
     <>
       <Routing />
